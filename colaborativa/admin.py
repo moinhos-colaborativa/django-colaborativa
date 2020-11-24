@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import ExtraInfo
+from colaborativa.models import ExtraInfo
 
 
 @admin.register(ExtraInfo)

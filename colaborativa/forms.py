@@ -1,5 +1,6 @@
-from .models import ExtraInfo
 from django.forms import ModelForm
+
+from colaborativa.models import ExtraInfo
 
 
 class ExtraInfoForm(ModelForm):
