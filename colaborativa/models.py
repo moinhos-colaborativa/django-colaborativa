@@ -26,7 +26,5 @@ class ExtraInfo(models.Model):
     # state_ = models.CharField(verbose_name="Estado",max_length=100)
     health_hands = models.BooleanField(verbose_name="Participa ou participou do 'Saúde em Nossas Mãos'", default=False)
     health_hands_where = models.CharField(
-        verbose_name="(Se sim na l) Hospital que orientou seu projeto:",
-        max_length=100,
-        choices=HOSPITAL_CHOICES,
+        verbose_name="(Se sim na l) Hospital que orientou seu projeto:", max_length=100, choices=HOSPITAL_CHOICES,
     )

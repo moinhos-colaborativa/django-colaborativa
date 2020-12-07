@@ -25,6 +25,9 @@ import colaborativa
 python manage.py lms showmigration colaborativa --settings production
 
 
+pip install -U git+https://github.com/moinhos-colaborativa/django-colaborativa.git@feature/initial-form
+
+
 References
 ==========
 
