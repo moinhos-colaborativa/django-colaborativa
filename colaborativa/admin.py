@@ -9,7 +9,7 @@ class ExtraInfoModelAdmin(admin.ModelAdmin):
     list_display = (
         "user",
         "cpf",
-        "gender",
-        "state",
-        "city",
+        # "gender_1",
+        # "state_1",
+        # "city_1",
     )

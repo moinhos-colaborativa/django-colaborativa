@@ -19,12 +19,12 @@ class ExtraInfoForm(ModelForm):
         model = ExtraInfo
         fields = (
             "cpf",
-            "gender",
+            # "gender_1",
             "profession",
             "occupation_area",
             "hospital_work",
-            "city",
-            "state",
+            # "city_1",
+            # "state_1",
             "health_hands",
             "health_hands_where",
         )
