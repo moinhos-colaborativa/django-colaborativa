@@ -12,11 +12,11 @@ class ExtraInfo(models.Model):
     )
     HOSPITAL_CHOICES = (
         ("Não participou", "Não participou"),
-        ("HCor Hospital do Coração", "HCor Hospital do Coração"),
-        ("Hospital Alemão Oswaldo Cruz", "Hospital Alemão Oswaldo Cruz"),
-        ("Hospital Israelita Albert Einstein", "Hospital Israelita Albert Einstein"),
-        ("Hospital Moinhos de Vento", "Hospital Moinhos de Vento"),
-        ("Hospital Sírio Libanês", "Hospital Sírio Libanês"),
+        ("HCor Hospital do Coração", "Participou no HCor Hospital do Coração"),
+        ("Hospital Alemão Oswaldo Cruz", "Participou no Hospital Alemão Oswaldo Cruz"),
+        ("Hospital Israelita Albert Einstein", "Participou no Hospital Israelita Albert Einstein"),
+        ("Hospital Moinhos de Vento", "Participou no Hospital Moinhos de Vento"),
+        ("Hospital Sírio Libanês", "Participou no Hospital Sírio Libanês"),
     )
     cpf = models.CharField(verbose_name="CPF", max_length=14, unique=True)
     # gender_ = models.CharField(verbose_name="Gênero", max_length=1, choices=GENDER_CHOICES)
@@ -29,7 +29,5 @@ class ExtraInfo(models.Model):
     #     verbose_name="Participa ou participou do 'Saúde em Nossas Mãos'", blank=False, null=False
     # )
     health_hands_where = models.CharField(
-        verbose_name="Participa ou participou do 'Saúde em Nossas Mãos'? Se sim, selecione o hospital",
-        max_length=100,
-        choices=HOSPITAL_CHOICES,
+        verbose_name="Participa ou participou do 'Saúde em Nossas Mãos'?", max_length=100, choices=HOSPITAL_CHOICES,
     )
