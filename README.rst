@@ -30,6 +30,8 @@ pip install -U git+https://github.com/moinhos-colaborativa/django-colaborativa.g
 
 LDFLAGS=-L/usr/lib/openssl-1.0 CFLAGS="-I/usr/include/openssl-1.0" pyenv install 3.5.2
 
+/edx/app/edxapp/venvs/edxapp/lib/python3.5/site-packages/colaborativa/
+
 References
 ==========
 
