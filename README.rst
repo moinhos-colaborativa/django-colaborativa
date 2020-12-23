@@ -22,11 +22,12 @@ from django.conf import settings
 settings.INSTALLED_APPS
 import colaborativa
 
-python manage.py lms migrate colaborativa --settings production
+python manage.py lms migrate colaborativa zero --settings production
 python manage.py lms showmigration colaborativa --settings production
 
 pip install -U git+https://github.com/moinhos-colaborativa/django-colaborativa.git@feature/initial-form
 
+LDFLAGS=-L/usr/lib/openssl-1.0 CFLAGS="-I/usr/include/openssl-1.0" pyenv install 3.5.2
 
 References
 ==========

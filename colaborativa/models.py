@@ -1,6 +1,8 @@
 from django.conf import settings
 from django.db import models
 
+from colaborativa.validators import validate_CPF
+
 USER_MODEL = getattr(settings, "AUTH_USER_MODEL", "auth.User")
 
 
@@ -17,7 +19,7 @@ class ExtraInfo(models.Model):
         ("Hospital Moinhos de Vento", "Hospital Moinhos de Vento"),
         ("Hospital Sírio Libanês", "Hospital Sírio Libanês"),
     )
-    cpf = models.CharField(verbose_name="CPF", max_length=15)
+    cpf = models.CharField(verbose_name="CPF", max_length=15, unique=True, validators=[validate_CPF])
     # gender_ = models.CharField(verbose_name="Gênero", max_length=1, choices=GENDER_CHOICES)
     profession = models.CharField(verbose_name="Profissão", max_length=100)
     occupation_area = models.CharField(verbose_name="Área de atuação", max_length=100)
