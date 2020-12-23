@@ -7,6 +7,7 @@ name = "pypi"
 django = "==2.2.15"
 django-colaborativa = {path = "./..", editable = true}
 black = "==19.10b0"
+django-localflavor = "==3.0.1"
 
 [dev-packages]
 

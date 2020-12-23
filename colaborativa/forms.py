@@ -1,12 +1,11 @@
 from django.forms import ModelForm
+from localflavor.br.forms import BRCPFField
 
 from colaborativa.models import ExtraInfo
 
 
 class ExtraInfoForm(ModelForm):
-    """
-    The fields on this form are derived from the ExtraInfo model in models.py.
-    """
+    cpf = BRCPFField(required=True)
 
     # def __init__(self, *args, **kwargs):
     #     super(ExtraInfoForm, self).__init__(*args, **kwargs)
