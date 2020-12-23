@@ -44,9 +44,7 @@ class ExtraInfoForm(ModelForm):
     cpf = forms.CharField(
         label="CPF", help_text="Informe o seu CPF.", min_length=11, max_length=14, validators=[BRCPFValidator()]
     )
-    health_hands = forms.BooleanField(
-        required=True, label="Saúde em Nossas Mãos", help_text="Participa ou participou do 'Saúde em Nossas Mãos'"
-    )
+    health_hands = forms.BooleanField(required=True, label="Participa ou participou do 'Saúde em Nossas Mãos'")
 
     # def __init__(self, *args, **kwargs):
     #     super(ExtraInfoForm, self).__init__(*args, **kwargs)
