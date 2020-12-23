@@ -44,11 +44,11 @@ class ExtraInfoForm(ModelForm):
     cpf = forms.CharField(
         label="CPF", help_text="Informe o seu CPF.", min_length=11, max_length=14, validators=[BRCPFValidator()]
     )
-    health_hands = forms.BooleanField(required=True, label="Participa ou participou do 'Saúde em Nossas Mãos'")
+    # health_hands = forms.BooleanField(required=True, label="Participa ou participou do 'Saúde em Nossas Mãos'")
 
-    def __init__(self, *args, **kwargs):
-        super(ExtraInfoForm, self).__init__(*args, **kwargs)
-        self.fields["health_hands_where"].required = False
+    # def __init__(self, *args, **kwargs):
+    #     super(ExtraInfoForm, self).__init__(*args, **kwargs)
+    #     self.fields["health_hands_where"].required = False
 
     class Meta:
         model = ExtraInfo
@@ -60,6 +60,6 @@ class ExtraInfoForm(ModelForm):
             "hospital_work",
             # "city_1",
             # "state_1",
-            "health_hands",
+            # "health_hands",
             "health_hands_where",
         )
