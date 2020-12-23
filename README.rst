@@ -32,6 +32,8 @@ LDFLAGS=-L/usr/lib/openssl-1.0 CFLAGS="-I/usr/include/openssl-1.0" pyenv install
 
 /edx/app/edxapp/venvs/edxapp/lib/python3.5/site-packages/colaborativa/
 
+sudo -H -u edxapp bash -c 'cd /edx/app/edxapp/ && source edxapp_env && cd edx-platform && paver update_assets --settings production'
+
 References
 ==========
 

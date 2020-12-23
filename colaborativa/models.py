@@ -28,5 +28,5 @@ class ExtraInfo(models.Model):
         verbose_name="Participa ou participou do 'Saúde em Nossas Mãos'", blank=False, null=False
     )
     health_hands_where = models.CharField(
-        verbose_name="(Se sim na l) Hospital que orientou seu projeto:", max_length=100, choices=HOSPITAL_CHOICES,
+        verbose_name="Hospital que orientou seu projeto:", max_length=100, choices=HOSPITAL_CHOICES,
     )
