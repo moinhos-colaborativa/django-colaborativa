@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.db import models
+from localflavor.br.models import BRCPFField
 
 USER_MODEL = getattr(settings, "AUTH_USER_MODEL", "auth.User")
 
@@ -17,7 +18,8 @@ class ExtraInfo(models.Model):
         ("Hospital Moinhos de Vento", "Hospital Moinhos de Vento"),
         ("Hospital Sírio Libanês", "Hospital Sírio Libanês"),
     )
-    cpf = models.CharField(verbose_name="CPF", max_length=15, unique=True)
+    # cpf = models.CharField(verbose_name="CPF", max_length=15, unique=True)
+    cpf = BRCPFField(verbose_name="CPF", unique=True)
     # gender_ = models.CharField(verbose_name="Gênero", max_length=1, choices=GENDER_CHOICES)
     profession = models.CharField(verbose_name="Profissão", max_length=100)
     occupation_area = models.CharField(verbose_name="Área de atuação", max_length=100)

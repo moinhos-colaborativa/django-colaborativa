@@ -5,8 +5,6 @@ from colaborativa.models import ExtraInfo
 
 
 class ExtraInfoForm(ModelForm):
-    cpf = BRCPFField(required=True)
-
     # def __init__(self, *args, **kwargs):
     #     super(ExtraInfoForm, self).__init__(*args, **kwargs)
     #     self.fields["favorite_movie"].error_messages = {
