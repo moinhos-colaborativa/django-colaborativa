@@ -11,6 +11,7 @@ class ExtraInfo(models.Model):
         ("F", "Feminino"),
     )
     HOSPITAL_CHOICES = (
+        ("Não participou", "Não participou"),
         ("HCor Hospital do Coração", "HCor Hospital do Coração"),
         ("Hospital Alemão Oswaldo Cruz", "Hospital Alemão Oswaldo Cruz"),
         ("Hospital Israelita Albert Einstein", "Hospital Israelita Albert Einstein"),
@@ -24,9 +25,11 @@ class ExtraInfo(models.Model):
     hospital_work = models.CharField(verbose_name="Hospital onde trabalha", max_length=100)
     # city_ = models.CharField(verbose_name="Cidade", max_length=100)
     # state_ = models.CharField(verbose_name="Estado",max_length=100)
-    health_hands = models.BooleanField(
-        verbose_name="Participa ou participou do 'Saúde em Nossas Mãos'", blank=False, null=False
-    )
+    # health_hands = models.BooleanField(
+    #     verbose_name="Participa ou participou do 'Saúde em Nossas Mãos'", blank=False, null=False
+    # )
     health_hands_where = models.CharField(
-        verbose_name="Hospital que orientou seu projeto:", max_length=100, choices=HOSPITAL_CHOICES,
+        verbose_name="Participa ou participou do 'Saúde em Nossas Mãos'? Se sim, selecione o hospital",
+        max_length=100,
+        choices=HOSPITAL_CHOICES,
     )

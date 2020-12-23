@@ -46,12 +46,9 @@ class ExtraInfoForm(ModelForm):
     )
     health_hands = forms.BooleanField(required=True, label="Participa ou participou do 'Saúde em Nossas Mãos'")
 
-    # def __init__(self, *args, **kwargs):
-    #     super(ExtraInfoForm, self).__init__(*args, **kwargs)
-    #     self.fields["favorite_movie"].error_messages = {
-    #         "required": u"Please tell us your favorite movie.",
-    #         "invalid": u"We're pretty sure you made that movie up.",
-    #     }
+    def __init__(self, *args, **kwargs):
+        super(ExtraInfoForm, self).__init__(*args, **kwargs)
+        self.fields["health_hands_where"].required = False
 
     class Meta:
         model = ExtraInfo
