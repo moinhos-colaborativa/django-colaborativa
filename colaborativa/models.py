@@ -20,7 +20,7 @@ class ExtraInfo(models.Model):
     )
     cpf = models.CharField(verbose_name="CPF", max_length=14, unique=True)
     # gender_ = models.CharField(verbose_name="Gênero", max_length=1, choices=GENDER_CHOICES)
-    profession = models.CharField(verbose_name="Profissão", max_length=100)
+    # profession = models.CharField(verbose_name="Profissão", max_length=100)
     occupation_area = models.CharField(verbose_name="Área de atuação", max_length=100)
     hospital_work = models.CharField(verbose_name="Hospital onde trabalha", max_length=100)
     # city_ = models.CharField(verbose_name="Cidade", max_length=100)

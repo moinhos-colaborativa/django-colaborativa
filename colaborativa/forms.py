@@ -55,7 +55,7 @@ class ExtraInfoForm(ModelForm):
         fields = (
             "cpf",
             # "gender_1",
-            "profession",
+            # "profession",
             "occupation_area",
             "hospital_work",
             # "city_1",
