@@ -7,14 +7,12 @@ from localflavor.br.validators import cpf_digits_re, dv_maker
 from colaborativa.models import ExtraInfo
 
 
-# from localflavor.br.validators import BRCPFValidator, cpf_digits_re
+from localflavor.br.validators import BRCPFValidator, cpf_digits_re
 
 
 class BRCPFValidator(RegexValidator):
     def __init__(self, *args, **kwargs):
-        super().__init__(
-            *args, regex=cpf_digits_re, message="O CPF informado é inválido.", **kwargs  # _("Invalid CPF number."),
-        )
+        super().__init__(*args, regex=cpf_digits_re, message="O CPF informado é inválido.", **kwargs)
 
     def __call__(self, value):
         if not value.isdigit():
@@ -49,6 +47,10 @@ class ExtraInfoForm(ModelForm):
     # def __init__(self, *args, **kwargs):
     #     super(ExtraInfoForm, self).__init__(*args, **kwargs)
     #     self.fields["health_hands_where"].required = False
+
+    def clean_cpf(self):
+        data = self.cleaned_data['cpf']
+        return data.replace(".", "").replace("-", "")
 
     class Meta:
         model = ExtraInfo
