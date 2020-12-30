@@ -2,12 +2,10 @@ from django import forms
 from django.core.validators import RegexValidator
 from django.forms import ModelForm
 from django.forms import ValidationError
-from localflavor.br.validators import cpf_digits_re, dv_maker
+from localflavor.br.validators import cpf_digits_re
+from localflavor.br.validators import dv_maker
 
 from colaborativa.models import ExtraInfo
-
-
-from localflavor.br.validators import BRCPFValidator, cpf_digits_re
 
 
 class BRCPFValidator(RegexValidator):
@@ -49,19 +47,9 @@ class ExtraInfoForm(ModelForm):
     #     self.fields["health_hands_where"].required = False
 
     def clean_cpf(self):
-        data = self.cleaned_data['cpf']
+        data = self.cleaned_data["cpf"]
         return data.replace(".", "").replace("-", "")
 
     class Meta:
         model = ExtraInfo
-        fields = (
-            "cpf",
-            # "gender_1",
-            # "profession",
-            "occupation_area",
-            "hospital_work",
-            # "city_1",
-            # "state_1",
-            # "health_hands",
-            "health_hands_where",
-        )
+        fields = ("cpf", "occupation_area", "hospital_work", "health_hands_where", "state1")
