@@ -47,6 +47,7 @@ class ExtraInfo(models.Model):
         ("Hospital Israelita Albert Einstein", "Participou no Hospital Israelita Albert Einstein"),
         ("Hospital Moinhos de Vento", "Participou no Hospital Moinhos de Vento"),
         ("Hospital Sírio Libanês", "Participou no Hospital Sírio Libanês"),
+        ("Hospital Beneficiência Portuguesa - BP", "Participou no Hospital Beneficiência Portuguesa - BP"),
     )
     cpf = models.CharField(verbose_name="CPF", max_length=14, unique=True)
     # gender_ = models.CharField(verbose_name="Gênero", max_length=1, choices=GENDER_CHOICES)
